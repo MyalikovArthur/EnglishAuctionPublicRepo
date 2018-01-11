@@ -1,7 +1,10 @@
 package gov.myalikov.auction.entity;
 
+import gov.myalikov.auction.util.UserPasswordHashGenerator;
+
 public class User {
-    private Long id;
+
+    private Integer id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
@@ -10,18 +13,18 @@ public class User {
     private String password;
     private UserLevel userLevel;
 
-    public User(Long id) {
+    public User(Integer id) {
         this.id = id;
     }
 
-    public User(Long id, String firstName, String lastName, String phoneNumber, String email, String username, String password, UserLevel userLevel) {
+    public User(Integer id, String firstName, String lastName, String phoneNumber, String email, String username, String password, UserLevel userLevel) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.username = username;
-        this.password = password;
+        this.password = UserPasswordHashGenerator.hash(password);
         this.userLevel = userLevel;
     }
 
@@ -81,11 +84,11 @@ public class User {
         this.userLevel = userLevel;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jbcrypt-0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jbcrypt-0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcommander-1.72.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-core-2.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-api-2.10.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
